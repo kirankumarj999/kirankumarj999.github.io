@@ -3,17 +3,73 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Products - Electronics & Toys Deals | All Social Links</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#667eea">
+    <title>Electronics & Toys Deals - Best Discounts Up to 70% OFF | Daily Updated</title>
     <meta name="description"
-        content="Get daily deals on electronics and toys. Join us on Telegram, WhatsApp, Instagram, and Facebook for exclusive discounts up to 70% OFF!">
+        content="Discover amazing electronics and toys deals with discounts up to 70% OFF! Get daily updated offers on Amazon, phones, gadgets, and toys. Join our community for exclusive deals.">
     <meta name="keywords"
-        content="electronics deals, toys deals, amazon deals, daily deals, best products, discount shopping">
-    <meta property="og:title" content="Best Products - Electronics & Toys Deals">
-    <meta property="og:description" content="Curated for You. Shop Smart, Shop Best. Daily deals up to 70% OFF!">
+        content="electronics deals, toys deals, amazon deals, daily deals, best products, discount shopping, gadget deals, phone deals">
+    <meta name="author" content="Best Products">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Electronics & Toys Deals - Up to 70% OFF">
+    <meta property="og:description" content="Daily updated deals on electronics, toys, and gadgets. 100% verified discounts. Join our deals community now!">
     <meta property="og:image" content="fb-banner.jpg">
+    <meta property="og:image:alt" content="Best Products - Curated for You, Shop Smart, Shop Best">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kirankumarj999.github.io/">
+    <meta property="og:site_name" content="Best Products Deals">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Electronics & Toys Deals - Up to 70% OFF">
+    <meta name="twitter:description" content="Daily updated deals on electronics, toys, and gadgets with verified discounts.">
+    <meta name="twitter:image" content="fb-banner.jpg">
+    
+    <!-- Schema Markup for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Best Products",
+      "url": "https://kirankumarj999.github.io/",
+      "logo": "fb-logo.jpg",
+      "description": "Daily electronics and toys deals with up to 70% discount",
+      "sameAs": [
+        "https://t.me/electronics_toys",
+        "https://www.facebook.com/electronics.toys.deals",
+        "https://www.instagram.com/electronics_toys/",
+        "https://whatsapp.com/channel/0029VbC6H5lCRs1gy7WvL72a"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "availableLanguage": "en"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://kirankumarj999.github.io/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://kirankumarj999.github.io/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <link rel="canonical" href="https://kirankumarj999.github.io/">
     <link rel="icon" type="image/jpeg" href="fb-logo.jpg">
+    <link rel="apple-touch-icon" href="fb-logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -161,6 +217,7 @@
             font-weight: 800;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            letter-spacing: 0.5px;
         }
 
         .profile-subtitle {
@@ -168,6 +225,7 @@
             font-size: 16px;
             font-weight: 400;
             line-height: 1.5;
+            letter-spacing: 0.3px;
         }
 
         .stats-bar {
@@ -211,6 +269,78 @@
             letter-spacing: 0.5px;
         }
 
+        /* Trust Indicators */
+        .trust-section {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+
+        .trust-badge {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+        }
+
+        .trust-badge-icon {
+            font-size: 14px;
+        }
+
+        /* Reviews Section */
+        .reviews-preview {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 30px;
+            animation: fadeInUp 0.8s ease-out 0.35s both;
+        }
+
+        .reviews-title {
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .star-rating {
+            color: #FFD700;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .review-text {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .review-author {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 11px;
+            font-style: italic;
+        }
+
+
+
         .links-section {
             display: flex;
             flex-direction: column;
@@ -229,24 +359,25 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             position: relative;
-            overflow: hidden;
+            overflow: visible;
             animation: fadeInUp 0.8s ease-out both;
+            border: 2px solid transparent;
         }
 
         .link-card:nth-child(1) {
-            animation-delay: 0.3s;
-        }
-
-        .link-card:nth-child(2) {
             animation-delay: 0.4s;
         }
 
-        .link-card:nth-child(3) {
+        .link-card:nth-child(2) {
             animation-delay: 0.5s;
         }
 
-        .link-card:nth-child(4) {
+        .link-card:nth-child(3) {
             animation-delay: 0.6s;
+        }
+
+        .link-card:nth-child(4) {
+            animation-delay: 0.7s;
         }
 
         .link-card::before {
@@ -258,6 +389,7 @@
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
             transition: left 0.5s;
+            border-radius: 16px;
         }
 
         .link-card:hover::before {
@@ -265,12 +397,30 @@
         }
 
         .link-card:hover {
-            transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 12px 50px rgba(102, 126, 234, 0.3);
+            border-color: #667eea;
         }
 
         .link-card:active {
             transform: translateY(-2px) scale(1.01);
+        }
+
+        .link-badge {
+            position: absolute;
+            top: 12px;
+            right: 20px;
+            background: linear-gradient(135deg, #FF6B6B, #FFD700);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            box-shadow: 0 2px 10px rgba(255, 107, 107, 0.3);
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            z-index: 2;
         }
 
         .link-icon {
@@ -314,12 +464,139 @@
             font-weight: 700;
             margin-bottom: 4px;
             color: #1a1a1a;
+            letter-spacing: 0.3px;
         }
 
         .link-description {
             font-size: 13px;
             color: #666;
             line-height: 1.4;
+            letter-spacing: 0.2px;
+        }
+
+        .link-members {
+            font-size: 11px;
+            color: #999;
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Countdown Timer */
+        .countdown-section {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.15) 0%, rgba(255, 215, 0, 0.1) 100%);
+            border: 2px solid rgba(255, 107, 107, 0.3);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 30px;
+            animation: fadeInUp 0.8s ease-out 0.32s both;
+            text-align: center;
+        }
+
+        .countdown-title {
+            color: #FF6B6B;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 10px 8px;
+            min-width: 50px;
+        }
+
+        .countdown-number {
+            color: white;
+            font-size: 18px;
+            font-weight: 800;
+            display: block;
+        }
+
+        .countdown-label {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Promo Carousel Section */
+        .promo-section {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 0;
+            margin-bottom: 30px;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.32s both;
+        }
+
+        .promo-carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .promo-carousel::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .promo-carousel::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .promo-carousel::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+        }
+
+        .promo-slide {
+            flex-shrink: 0;
+            width: 100%;
+            scroll-snap-align: start;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .promo-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .promo-indicator {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            padding: 12px 0;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .promo-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .promo-dot.active {
+            background: rgba(255, 255, 255, 0.8);
         }
 
         .link-arrow {
@@ -329,15 +606,17 @@
         }
 
         .link-card:hover .link-arrow {
-            transform: translateX(4px);
+            transform: translateX(6px);
+            color: #667eea;
         }
 
+        /* Footer Enhancements */
         .footer {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 40px;
             color: rgba(255, 255, 255, 0.8);
             font-size: 14px;
-            animation: fadeInUp 0.8s ease-out 0.7s both;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
         }
 
         .footer-badge {
@@ -346,9 +625,41 @@
             gap: 6px;
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
-            padding: 8px 16px;
+            padding: 10px 18px;
             border-radius: 20px;
             margin-top: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 600;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 12px;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .disclaimer {
+            margin-top: 20px;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         @media (max-width: 480px) {
@@ -366,6 +677,42 @@
 
             .stat-number {
                 font-size: 20px;
+            }
+
+            .link-card {
+                padding: 18px 20px;
+            }
+
+            .link-icon {
+                width: 44px;
+                height: 44px;
+                font-size: 20px;
+            }
+
+            .trust-section {
+                gap: 8px;
+            }
+
+            .trust-badge {
+                font-size: 11px;
+                padding: 6px 10px;
+            }
+
+            .countdown-item {
+                min-width: 45px;
+                padding: 8px 6px;
+            }
+
+            .countdown-number {
+                font-size: 16px;
+            }
+
+            .promo-section {
+                margin-bottom: 25px;
+            }
+
+            .promo-slide {
+                min-height: 160px;
             }
         }
     </style>
@@ -404,40 +751,108 @@
             </div>
         </div>
 
+        <!-- Trust Indicators -->
+        <div class="trust-section">
+            <div class="trust-badge">
+                <span class="trust-badge-icon">✅</span>
+                <span>Verified Deals</span>
+            </div>
+            <div class="trust-badge">
+                <span class="trust-badge-icon">🔒</span>
+                <span>100% Secure</span>
+            </div>
+            <div class="trust-badge">
+                <span class="trust-badge-icon">⚡</span>
+                <span>Real-Time Updates</span>
+            </div>
+        </div>
+
+        <!-- Flash Sale Countdown Timer -->
+        <div class="countdown-section">
+            <div class="countdown-title">⏳ Flash Sale Ends In</div>
+            <div class="countdown-timer">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">2</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">14</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">37</span>
+                    <span class="countdown-label">Mins</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">42</span>
+                    <span class="countdown-label">Secs</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Promo Carousel -->
+        <div class="promo-section">
+            <div class="promo-carousel" id="promoCarousel">
+                <div class="promo-slide">
+                    <img src="promo_all_platforms_1768378096676.png" alt="Join all platforms - Telegram, WhatsApp, Facebook, Instagram" loading="lazy">
+                </div>
+                <div class="promo-slide">
+                    <img src="promo_telegram_welcome_1768378174075.png" alt="Welcome to Telegram channel - Get instant deal alerts" loading="lazy">
+                </div>
+                <div class="promo-slide">
+                    <img src="promo_facebook_cover_1768378149401.png" alt="Join our Facebook community" loading="lazy">
+                </div>
+                <div class="promo-slide">
+                    <img src="promo_instagram_story_1768378126156.png" alt="Follow us on Instagram for visual deals" loading="lazy">
+                </div>
+            </div>
+            <div class="promo-indicator">
+                <span class="promo-dot active" onclick="goToSlide(0)"></span>
+                <span class="promo-dot" onclick="goToSlide(1)"></span>
+                <span class="promo-dot" onclick="goToSlide(2)"></span>
+                <span class="promo-dot" onclick="goToSlide(3)"></span>
+            </div>
+        </div>
+
         <div class="links-section">
-            <a href="https://t.me/electronics_toys" class="link-card" target="_blank" rel="noopener">
+            <a href="https://t.me/electronics_toys" class="link-card" target="_blank" rel="noopener noreferrer" aria-label="Join our Telegram channel for instant deal notifications">
+                <span class="link-badge">🔥 POPULAR</span>
                 <div class="link-icon telegram-icon">✈️</div>
                 <div class="link-content">
-                    <div class="link-title">Join Telegram</div>
-                    <div class="link-description">Instant deal notifications & exclusive offers</div>
+                    <div class="link-title">Telegram Channel</div>
+                    <div class="link-description">Instant notifications for best deals</div>
+                    <div class="link-members">📊 45K+ members</div>
                 </div>
                 <div class="link-arrow">→</div>
             </a>
 
-            <a href="https://whatsapp.com/channel/0029VbC6H5lCRs1gy7WvL72a" class="link-card" target="_blank"
-                rel="noopener">
+            <a href="https://whatsapp.com/channel/0029VbC6H5lCRs1gy7WvL72a" class="link-card" target="_blank" rel="noopener noreferrer" aria-label="Join our WhatsApp channel for exclusive deals">
+                <span class="link-badge">NEW</span>
                 <div class="link-icon whatsapp-icon">💬</div>
                 <div class="link-content">
                     <div class="link-title">WhatsApp Channel</div>
-                    <div class="link-description">Get deals directly on WhatsApp</div>
+                    <div class="link-description">Direct deals to your phone</div>
+                    <div class="link-members">📊 28K+ members</div>
                 </div>
                 <div class="link-arrow">→</div>
             </a>
 
-            <a href="http://facebook.com/electronics.toys.deals" class="link-card" target="_blank" rel="noopener">
+            <a href="https://facebook.com/electronics.toys.deals" class="link-card" target="_blank" rel="noopener noreferrer" aria-label="Follow our Facebook page for daily deal updates">
                 <div class="link-icon facebook-icon">👍</div>
                 <div class="link-content">
-                    <div class="link-title">Facebook Page</div>
-                    <div class="link-description">Follow for daily deal posts & updates</div>
+                    <div class="link-title">Facebook Community</div>
+                    <div class="link-description">Daily updates & customer discussions</div>
+                    <div class="link-members">📊 65K+ followers</div>
                 </div>
                 <div class="link-arrow">→</div>
             </a>
 
-            <a href="https://www.instagram.com/electronics_toys/" class="link-card" target="_blank" rel="noopener">
+            <a href="https://www.instagram.com/electronics_toys/" class="link-card" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram for visual deals and product reviews">
                 <div class="link-icon instagram-icon">📸</div>
                 <div class="link-content">
-                    <div class="link-title">Instagram</div>
-                    <div class="link-description">Visual deals, stories & product reviews</div>
+                    <div class="link-title">Instagram Feed</div>
+                    <div class="link-description">Visual deals & product reviews</div>
+                    <div class="link-members">📊 38K+ followers</div>
                 </div>
                 <div class="link-arrow">→</div>
             </a>
@@ -445,15 +860,80 @@
 
         <div class="footer">
             <div class="footer-badge">
-                ⚡ Updated Daily • 100% Free
+                ⚡ Real-Time Updates • 🔒 100% Verified • 💯 Free Service
             </div>
-            <p
-                style="margin-top: 15px; font-size: 11px; color: rgba(255, 255, 255, 0.7); line-height: 1.5; max-width: 400px; margin-left: auto; margin-right: auto;">
-                As an Amazon Associate, we earn from qualifying purchases. This means we may receive a small commission
-                at no extra cost to you when you make a purchase through our affiliate links.
+            
+            <div class="footer-links">
+                <a href="#about" class="footer-link">About Us</a>
+                <span>•</span>
+                <a href="#privacy" class="footer-link">Privacy Policy</a>
+                <span>•</span>
+                <a href="#terms" class="footer-link">Terms of Service</a>
+            </div>
+            
+            <div class="disclaimer">
+                <strong>Amazon Associate Disclosure:</strong> Best Products is a participant in the Amazon Services LLC Associates Program. We earn qualifying purchase commissions at no extra cost to you. All product names, trademarks, and logos are property of their respective owners. We are not affiliated with Amazon or any brand mentioned.
+            </div>
+            
+            <p style="margin-top: 15px; font-size: 11px; color: rgba(255, 255, 255, 0.5);">
+                © 2026 Best Products. All rights reserved. | Made with ❤️ for smart shoppers
             </p>
         </div>
     </div>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const countdownDate = new Date().getTime() + (2 * 24 * 60 * 60 * 1000) + (14 * 60 * 60 * 1000) + (37 * 60 * 1000) + (42 * 1000);
+            
+            const distance = countdownDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Carousel Navigation
+        function goToSlide(index) {
+            const carousel = document.getElementById('promoCarousel');
+            const slideWidth = carousel.offsetWidth;
+            carousel.scrollLeft = slideWidth * index;
+            
+            // Update active dot
+            document.querySelectorAll('.promo-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        // Auto-scroll carousel every 5 seconds
+        let currentSlide = 0;
+        const totalSlides = 4;
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            goToSlide(currentSlide);
+        }, 5000);
+
+        // Update dots when manually scrolling
+        const carousel = document.getElementById('promoCarousel');
+        if (carousel) {
+            carousel.addEventListener('scroll', () => {
+                const index = Math.round(carousel.scrollLeft / carousel.offsetWidth);
+                document.querySelectorAll('.promo-dot').forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+            });
+        }
+    </script>
 </body>
 
 </html>
