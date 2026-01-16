@@ -807,10 +807,10 @@
                 </div>
             </div>
             <div class="promo-indicator">
-                <span class="promo-dot active" onclick="goToSlide(0)"></span>
-                <span class="promo-dot" onclick="goToSlide(1)"></span>
-                <span class="promo-dot" onclick="goToSlide(2)"></span>
-                <span class="promo-dot" onclick="goToSlide(3)"></span>
+                <span class="promo-dot active" data-slide="0" role="button" tabindex="0" aria-label="Go to slide 1"></span>
+                <span class="promo-dot" data-slide="1" role="button" tabindex="0" aria-label="Go to slide 2"></span>
+                <span class="promo-dot" data-slide="2" role="button" tabindex="0" aria-label="Go to slide 3"></span>
+                <span class="promo-dot" data-slide="3" role="button" tabindex="0" aria-label="Go to slide 4"></span>
             </div>
         </div>
 
@@ -864,11 +864,11 @@
             </div>
             
             <div class="footer-links">
-                <a href="#about" class="footer-link">About Us</a>
+                <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
                 <span>•</span>
-                <a href="#privacy" class="footer-link">Privacy Policy</a>
+                <a href="terms-of-service.html" class="footer-link">Terms of Service</a>
                 <span>•</span>
-                <a href="#terms" class="footer-link">Terms of Service</a>
+                <a href="/" class="footer-link">Home</a>
             </div>
             
             <div class="disclaimer">
@@ -904,36 +904,96 @@
         setInterval(updateCountdown, 1000);
 
         // Carousel Navigation
+        let currentSlide = 0;
+        const totalSlides = 4;
+
         function goToSlide(index) {
             const carousel = document.getElementById('promoCarousel');
+            if (!carousel) return;
+            
             const slideWidth = carousel.offsetWidth;
             carousel.scrollLeft = slideWidth * index;
+            currentSlide = index;
             
             // Update active dot
             document.querySelectorAll('.promo-dot').forEach((dot, i) => {
                 dot.classList.toggle('active', i === index);
+                dot.setAttribute('aria-current', i === index ? 'true' : 'false');
             });
         }
 
+        // Dot click event listeners (removed inline onclick)
+        document.querySelectorAll('.promo-dot').forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+                // Stop auto-scroll for 5 seconds after user interaction
+                clearInterval(autoScrollInterval);
+                autoScrollInterval = setInterval(autoScroll, 5000);
+            });
+            
+            // Keyboard navigation support
+            dot.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    goToSlide(index);
+                }
+            });
+        });
+
         // Auto-scroll carousel every 5 seconds
-        let currentSlide = 0;
-        const totalSlides = 4;
-        setInterval(() => {
+        let autoScrollInterval = setInterval(autoScroll, 5000);
+
+        function autoScroll() {
             currentSlide = (currentSlide + 1) % totalSlides;
             goToSlide(currentSlide);
-        }, 5000);
+        }
+
+        // Keyboard navigation for carousel (arrow keys)
+        document.addEventListener('keydown', (e) => {
+            const carousel = document.getElementById('promoCarousel');
+            if (!carousel) return;
+            
+            // Only enable keyboard nav when carousel is in focus or user presses keys
+            if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                currentSlide = (currentSlide + 1) % totalSlides;
+                goToSlide(currentSlide);
+                clearInterval(autoScrollInterval);
+                autoScrollInterval = setInterval(autoScroll, 5000);
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                goToSlide(currentSlide);
+                clearInterval(autoScrollInterval);
+                autoScrollInterval = setInterval(autoScroll, 5000);
+            }
+        });
 
         // Update dots when manually scrolling
         const carousel = document.getElementById('promoCarousel');
         if (carousel) {
             carousel.addEventListener('scroll', () => {
                 const index = Math.round(carousel.scrollLeft / carousel.offsetWidth);
-                document.querySelectorAll('.promo-dot').forEach((dot, i) => {
-                    dot.classList.toggle('active', i === index);
-                });
+                if (index !== currentSlide) {
+                    currentSlide = index;
+                    document.querySelectorAll('.promo-dot').forEach((dot, i) => {
+                        dot.classList.toggle('active', i === index);
+                        dot.setAttribute('aria-current', i === index ? 'true' : 'false');
+                    });
+                }
+            });
+            
+            // Pause auto-scroll when user hovers over carousel
+            carousel.addEventListener('mouseenter', () => {
+                clearInterval(autoScrollInterval);
+            });
+            
+            carousel.addEventListener('mouseleave', () => {
+                autoScrollInterval = setInterval(autoScroll, 5000);
             });
         }
     </script>
+
 </body>
 
 </html>
